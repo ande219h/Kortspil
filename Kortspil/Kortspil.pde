@@ -87,7 +87,7 @@ void keyPressed() {
       if (husSum>=16) break;
     }
     //kortene tegnes
-    tegnKort(husKort[1], 1, 0);
+    tegnKort(husKort[0], 0, 0);
   }
 }
 
@@ -133,7 +133,7 @@ String vinder(int spiller, int hus) {
   String t="";
   //der tjekkes hvem der er tættest på 21
   if (abs(21-spiller)>=abs(21-hus)) {
-    t="Spiller taber";
+    t="Du taber";
     return t;
   } else {
     t="Du vinder";
@@ -161,7 +161,7 @@ void tegnKort(String kort, int j, int placY) {
 void point() {
   textAlign(LEFT);
   textSize(20);
-  text("Du har: " + spillerSum + " Huset har: " + husSum, 10, 10+height/2);
+  text("Du har: " + spillerSum + " Dealer har: " + husSum, 10, 10+height/2);
 }
 
 //kortspil
